@@ -1,0 +1,45 @@
+{
+  "name": "tailwind-mist-theme",
+  "publisher": "joao-vitor-ceolin-prudente",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joao-vitor-prudente/tailwind_mist_vscode_theme"
+  },
+  "displayName": "tailwind_mist_theme",
+  "version": "0.0.1",
+  "description": "A dark high contrast theme based on tailwind colors using mist as base",
+  "categories": [
+    "Themes"
+  ],
+  "type": "module",
+  "scripts": {
+    "generate": "bun run src/generate.ts",
+    "generate:watch": "bun run --hot src/generate.ts",
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
+    "build": "bun run src/generate.ts && vsce package"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.3.12",
+    "@types/node": "^25.6.0",
+    "@typescript/native-preview": "^7.0.0-dev.20260417.1",
+    "@vscode/vsce": "^3.9.1",
+    "oxfmt": "^0.45.0",
+    "oxlint": "^1.60.0",
+    "oxlint-tsgolint": "^0.21.1"
+  },
+  "contributes": {
+    "themes": [
+      {
+        "label": "Tailwind Mist",
+        "uiTheme": "hc-black",
+        "path": "./themes/Tailwind Mist-color-theme.json"
+      }
+    ]
+  },
+  "engines": {
+    "vscode": "^1.116.0"
+  }
+}
